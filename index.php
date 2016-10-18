@@ -181,9 +181,10 @@ class Weixin
             $content = "这是个文本消息";
         } else if (strstr($keyword, "表情")){
             $content = "中国：".$this->bytes_to_emoji(0x1F1E8).$this->bytes_to_emoji(0x1F1F3)."\n仙人掌：".$this->bytes_to_emoji(0x1F335);
-        } else if (strstr($keyword, "单图文")){
+        } else if (strstr($keyword, "home")
+            || strstr($keyword, "Home")){
             $content = array();
-            $content[] = array("Title"=>"单图文标题",  "Description"=>"单图文内容", "PicUrl"=>"http://discuz.comli.com/weixin/weather/icon/cartoon.jpg", "Url" =>"http://m.cnblogs.com/?u=txw1958");
+            $content[] = array("Title"=>"单图文标题",  "Description"=>"单图文内容", "PicUrl"=>"http://119.29.14.94/weixin/resource/home.jpg", "Url" =>"http://119.29.14.94/weixin/home.php");
         } else if (strstr($keyword, "图文") || strstr($keyword, "多图文")){
             $content = array();
             $content[] = array("Title"=>"多图文1标题", "Description"=>"", "PicUrl"=>"http://discuz.comli.com/weixin/weather/icon/cartoon.jpg", "Url" =>"http://m.cnblogs.com/?u=txw1958");
